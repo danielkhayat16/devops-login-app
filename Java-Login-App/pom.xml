@@ -72,8 +72,6 @@
         <id>central</id>
         <name>a0nymgefaiwwu-artifactory-primary-0-releases</name>
         <url>https://edshopdpt8.jfrog.io/artifactory/libs-release-local</url>
-    </repository>
-    <repository>
     	<id>jfrog</id>
     	<url>${jfrog.url}/devops101</url>
   	</repository>
