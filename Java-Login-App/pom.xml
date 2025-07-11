@@ -41,10 +41,6 @@
 			<scope>runtime</scope>
 		</dependency>
 		
-		
-		
-		
-		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
@@ -77,12 +73,10 @@
         <name>a0nymgefaiwwu-artifactory-primary-0-releases</name>
         <url>https://edshopdpt8.jfrog.io/artifactory/libs-release-local</url>
     </repository>
-</distributionManagement> 
-<distributionManagement>
-  <repository>
-    <id>jfrog</id>
-    <url>${jfrog.url}/devops101</url>
-  </repository>
+    <repository>
+    	<id>jfrog</id>
+    	<url>${jfrog.url}/devops101</url>
+  	</repository>
 </distributionManagement>
 
 </project>
