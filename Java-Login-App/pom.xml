@@ -20,6 +20,7 @@
 		<sonar.projectKey>danielkhayat16_devops-login-app</sonar.projectKey>
     	<sonar.organization>danielkhayat16</sonar.organization>
     	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<jfrog.url>https://danieldevops101.jfrog.io/artifactory</jfrog.url>
 	</properties>
 
 	<dependencies>
@@ -77,5 +78,11 @@
         <url>https://edshopdpt8.jfrog.io/artifactory/libs-release-local</url>
     </repository>
 </distributionManagement> 
+<distributionManagement>
+  <repository>
+    <id>jfrog</id>
+    <url>${jfrog.url}/devops101</url>
+  </repository>
+</distributionManagement>
 
 </project>
