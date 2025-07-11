@@ -33,6 +33,8 @@ jobs:
 
       - name: Build with Maven
         run: mvn clean install
+        working-directory: java-login-app
 
       - name: SonarCloud Scan
         run: mvn verify sonar:sonar -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+        working-directory: java-login-app
