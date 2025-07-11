@@ -35,10 +35,14 @@ jobs:
         run: mvn clean install
         working-directory: Java-Login-App
 
+      - name: Deploy to JFrog Artifactory
+        run: mvn deploy -DskipTests -Djfrog.url=${{ secrets.JFROG_URL }}
+        working-directory: Java-Login-App
+
       - name: SonarCloud Scan
         run: mvn verify sonar:sonar -Dsonar.login=${{ secrets.SONAR_TOKEN }}
         working-directory: Java-Login-App
-        
+
       - name: Set up settings.xml for Maven deploy
         run: |
           mkdir -p ~/.m2
@@ -54,6 +58,4 @@ jobs:
           </settings>
           EOF
 
-      - name: Deploy to JFrog Artifactory
-        run: mvn deploy -DskipTests -Djfrog.url=${{ secrets.JFROG_URL }}
-        working-directory: Java-Login-App
+      
